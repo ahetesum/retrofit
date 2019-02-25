@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var tutorialList= arrayOf("Tutorial One","Tutorial Two","Tutorial Three","Tutorial Four","Tutorial Five","Tutorial Six")
+    var tutorialList= arrayOf("Tutorial One","Tutorial Two","Tutorial Three","Tutorial Four","Tutorial Five","Tutorial Six","Tutorial Seven","Tutorial Eight")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -18,6 +18,11 @@ class TutorialFiveActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tutorial_five)
 
+        if(intent.hasExtra("TITLE"))
+        {
+            TutorialFiveActivity@ this.title = intent.getStringExtra("TITLE")
+        }
+
         var retrofit = Retrofit.Builder().baseUrl("https://jsonplaceholder.typicode.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()

@@ -17,6 +17,11 @@ class TutorialOneActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post)
 
+        if(intent.hasExtra("TITLE"))
+        {
+            TutorialOneActivity@ this.title = intent.getStringExtra("TITLE")
+        }
+
         var retrofit= Retrofit.Builder().baseUrl("https://jsonplaceholder.typicode.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -33,7 +38,7 @@ class TutorialOneActivity : AppCompatActivity() {
                     var posts = response.body()
                     for (i in posts!!.indices)
                     {
-                        var postString= "";
+                        var postString= ""
                         postString= "UserId: "+ posts[i].userId+" \n"
                         postString+="ID: "+ posts[i].id+" \n"
                         postString+="Title: "+ posts[i].title+" \n"
