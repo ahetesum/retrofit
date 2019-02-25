@@ -26,7 +26,7 @@ class TutorialTwoActivity : AppCompatActivity() {
         var call= jsonPlaceHolderApi.getAllComment(1)
         call.enqueue(object : Callback<List<Comment>> {
             override fun onFailure(call: Call<List<Comment>>?, t: Throwable?) {
-                postTextView.text = t!!.message
+                commentTextView.text = t!!.message
             }
 
             override fun onResponse(call: Call<List<Comment>>?, response: Response<List<Comment>>?) {
@@ -39,7 +39,7 @@ class TutorialTwoActivity : AppCompatActivity() {
                         postString+="ID: "+ comments[i].id+" \n"
                         postString+="Email: "+ comments[i].email+" \n"
                         postString+="Body: "+ comments[i].body+" \n\n"
-                        postTextView.append(postString)
+                        commentTextView.append(postString)
                     }
 
                 }

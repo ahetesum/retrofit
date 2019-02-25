@@ -2,6 +2,8 @@ package ali.com.retrofit.main;
 
 import ali.com.retrofit.R;
 import ali.com.retrofit.tutorial1.TutorialOneActivity;
+import ali.com.retrofit.tutorial2.TutorialTwoActivity;
+import ali.com.retrofit.tutorial3.TutorialThreeActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -33,24 +35,15 @@ public class TutorialAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         TextView item = ((ViewHolder)holder).item;
         item.setText(itemList[position]);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+
+        ((ViewHolder)holder).itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (position)
-                {
-                    case 0:
-                    Intent oneIntent= new Intent(context, TutorialOneActivity.class);
-                    context.startActivity(oneIntent);
-                    case 1:
-                        Intent twoIntent= new Intent(context, TutorialOneActivity.class);
-                        context.startActivity(twoIntent);
-                    case 2:
-                        Intent threeIntent= new Intent(context, TutorialOneActivity.class);
-                        context.startActivity(threeIntent);
-                }
+                redirectToTutorial(position);
             }
         });
     }
+
 
     @Override
     public int getItemCount() {
@@ -61,10 +54,32 @@ public class TutorialAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         public TextView item;
         public ViewHolder(View itemView) {
             super(itemView);
-            item = (TextView) itemView.findViewById(R.id.tutorialTextView);
+            item = itemView.findViewById(R.id.tutorialTextView);
         }
-
-
     }
+
+    private void redirectToTutorial(int position) {
+        switch (position)
+        {
+            case 0:
+                Intent oneIntent= new Intent(context, TutorialOneActivity.class);
+                context.startActivity(oneIntent);
+                break;
+            case 1:
+                Intent twoIntent= new Intent(context, TutorialTwoActivity.class);
+                context.startActivity(twoIntent);
+                break;
+            case 2:
+                Intent threeIntent= new Intent(context, TutorialThreeActivity.class);
+                context.startActivity(threeIntent);
+                break;
+            case 3:
+                Intent fourIntent= new Intent(context, TutorialThreeActivity.class);
+                context.startActivity(fourIntent);
+                break;
+
+        }
+    }
+
 
 }
