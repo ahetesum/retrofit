@@ -2,7 +2,7 @@ package ali.com.retrofit.tutorial5
 
 import ali.com.retrofit.JsonPlaceHolderApi
 import ali.com.retrofit.R
-import ali.com.retrofit.tutorial1.Post
+import ali.com.retrofit.models.Post
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_tutorial_five.*

@@ -1,7 +1,7 @@
 package ali.com.retrofit;
 
-import ali.com.retrofit.tutorial1.Post;
-import ali.com.retrofit.tutorial2.Comment;
+import ali.com.retrofit.models.Post;
+import ali.com.retrofit.models.Comment;
 import retrofit2.Call;
 import retrofit2.http.*;
 
@@ -28,4 +28,8 @@ public interface JsonPlaceHolderApi
 
     @POST("posts")
     Call<Post> createPost(@Body Post post);
+
+    @FormUrlEncoded
+    @POST("posts")
+    Call<Post> createPost(@Field("userId") int userId,@Field("title")String title,@Field("body")String body);
 }

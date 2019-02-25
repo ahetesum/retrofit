@@ -1,4 +1,4 @@
-package ali.com.retrofit.tutorial2
+package ali.com.retrofit.models
 
 class Comment
 {

@@ -2,6 +2,7 @@ package ali.com.retrofit.tutorial2
 
 import ali.com.retrofit.JsonPlaceHolderApi
 import ali.com.retrofit.R
+import ali.com.retrofit.models.Comment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_comments.*

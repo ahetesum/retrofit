@@ -1,4 +1,4 @@
-package ali.com.retrofit.tutorial1;
+package ali.com.retrofit.models;
 
 public class Post
 {
