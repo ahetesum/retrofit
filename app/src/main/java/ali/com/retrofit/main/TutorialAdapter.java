@@ -4,6 +4,7 @@ import ali.com.retrofit.R;
 import ali.com.retrofit.tutorial1.TutorialOneActivity;
 import ali.com.retrofit.tutorial2.TutorialTwoActivity;
 import ali.com.retrofit.tutorial3.TutorialThreeActivity;
+import ali.com.retrofit.tutorial4.TutorialFourActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -70,7 +71,7 @@ public class TutorialAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 context.startActivity(twoIntent);
                 break;
             case 2:
-                Intent threeIntent= new Intent(context, TutorialThreeActivity.class);
+                Intent threeIntent= new Intent(context, TutorialFourActivity.class);
                 context.startActivity(threeIntent);
                 break;
             case 3:
