@@ -5,8 +5,7 @@
 
     <dist:module dist:instant="true"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
             android:allowBackup="true"
@@ -15,7 +14,13 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".tutorial3.TutorialThreeActivity">
+        </activity>
+        <activity android:name=".tutorial1.TutorialOneActivity">
+        </activity>
+        <activity android:name=".tutorial2.TutorialTwoActivity">
+        </activity>
+        <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
